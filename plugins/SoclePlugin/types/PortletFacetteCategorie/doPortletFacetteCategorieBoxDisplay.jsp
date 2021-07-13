@@ -10,7 +10,7 @@
 	
 	String idFormElement = glp("jcmsplugin.socle.facette.form-element") + "-" + rechercheId + obj.getId();
 	
-	request.setAttribute("showFiltres", isInRechercheFacette);
+
 %>
 
 <ds:facetteCategorie obj='<%= obj %>' 
@@ -22,7 +22,7 @@
 		profondeur='<%= obj.getProfondeur() %>'
 		isSizeStd='<%= isInRechercheFacette %>'/>
 		
-<% request.removeAttribute("showFiltres"); %>
+
 
 <jalios:foreach collection='<%= obj.getCategoriesRacines(loggedMember) %>' name="itRootCat" type="Category">
     <input type="hidden" name='<%= "cidBranches" + idFormElement + itCounter %>' value='<%= itRootCat.getId() %>' data-technical-field />

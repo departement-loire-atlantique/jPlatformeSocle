@@ -1,4 +1,4 @@
 <%
 Publication publication = (Publication) request.getAttribute(PortalManager.PORTAL_PUBLICATION);
-Boolean isInRechercheFacette = (Util.notEmpty(publication) && publication.getId().equals(channel.getProperty("jcmsplugin.socle.idpub.annuaire.elus"))) || portal.equals(channel.getPublication("$jcmsplugin.socle.recherche.facettes.portal"));
+Boolean isInRechercheFacette = portal.equals(channel.getPublication("$jcmsplugin.socle.recherche.facettes.portal"));
 %>
